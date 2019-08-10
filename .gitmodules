@@ -1,0 +1,9 @@
+[submodule "facenet_trt"]
+	path = facenet_trt
+	url = https://github.com/JerryJiaGit/facenet_trt.git
+[submodule "alpr-unconstrained"]
+	path = alpr-unconstrained
+	url = https://github.com/sergiomsilva/alpr-unconstrained.git
+[submodule "TeslaJS"]
+	path = TeslaJS
+	url = https://github.com/mseminatore/TeslaJS.git
