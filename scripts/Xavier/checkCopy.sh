@@ -16,9 +16,11 @@ do
         echo "$i exists, skipping"
     else
         #not found
-        #cp $i /tesladrive/Videos/RecentClips/.
-        mv $i /tesladrive/Videos/RecentClips/. && sync
-	echo $i >> /tesladrive/recentfiles.txt
+        if [[ $i == *"front"* || $i == *"repeater"* ]]
+        then
+            mv $i /tesladrive/Videos/RecentClips/. && sync
+            echo $i >> /tesladrive/recentfiles.txt
+        fi
     fi
 done
 
