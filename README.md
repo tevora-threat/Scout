@@ -20,6 +20,8 @@ Scout is a simple to install, and simple to use tool for analyzing video data fr
 
 Scout is intended to be built on an Nividia Jetson Xavier or Nano, but you may use a Raspberry Pi 4 if real time notification isn't a priority.
 
+For detailed background on this project, check out this in-depth [WIRED article](https://www.wired.com/story/tesla-surveillance-detection-scout/).
+
 # First Things First (Polling Data)
 
 Even if you don't yet have the hardware necessary to start running inference with Scout, you can start polling your vehicle, so that at least you can start to capture your historical trip data. Scout utilizes [TeslaJS](https://github.com/mseminatore/TeslaJS) for polling.
@@ -59,8 +61,6 @@ Finally, run `./scripts/TeslaJS/setup.sh`.
 Try powering down the Xavier and plugging it into a Tesla USB slot (unplug your existing flash drive first if you're using one), using the provided Xavier USB-C to USB-A cable, and powering the Xavier via USB-C car charger (into the USB-C port on the side of the Xavier with the other various ports). Tesla will either automatically mount the device, or if you see the camera icon with a gray dot, you can press-hold on the camera button to mount the device. That gray dot should turn red.
 
 ---
-
-_Next Up: Web Client (for playback) coming within 24 hours. *Watch* this repo to be notified at that time_
 
 # BOM
 
