@@ -11,7 +11,7 @@ Before going any further, I want to make sure to acknowledge the people (and rep
 1. TeslaUSB (https://github.com/marcone/teslausb).
 2. ALPR-Unconstrained (https://github.com/sergiomsilva/alpr-unconstrained).
 3. Facenet (found at https://github.com/davidsandberg/facenet) and facenet_trt (https://github.com/JerryJiaGit/facenet_trt).
-4. TeslaJS (https://github.com/mseminatore/TeslaJS) build off the original work of Tim Dorr (https://tesla-api.timdorr.com/)
+4. TeslaJS (https://github.com/mseminatore/TeslaJS) built off of the original work of Tim Dorr (https://tesla-api.timdorr.com/)
 5. The whole team at Tevora (https://threat.tevora.com).
 
 ## Information
