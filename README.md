@@ -1,6 +1,6 @@
 # Surveillance Detection Scout - Your Lookout on Autopilot
 
-[![DEFCON 22 Badge](https://img.shields.io/badge/DEFCON-27-blue.svg)](https://defcon.org/html/defcon-27/dc-27-speakers.html#Kain)
+[![DEFCON 27 Badge](https://img.shields.io/badge/DEFCON-27-blue.svg)](https://defcon.org/html/defcon-27/dc-27-speakers.html#Kain)
 [![OPEN-SOURCE](https://img.shields.io/badge/OPEN-SOURCE-orange.svg)](#)
 [![GPL Licence](https://img.shields.io/badge/LICENSE-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0/)
 
