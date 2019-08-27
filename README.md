@@ -1,6 +1,6 @@
 # Surveillance Detection Scout - Your Lookout on Autopilot
 
-[![DEFCON 27 Badge](https://img.shields.io/badge/DEFCON-27-blue.svg)](https://defcon.org/html/defcon-27/dc-27-speakers.html#Kain)
+[![DEFCON 22 Badge](https://img.shields.io/badge/DEFCON-27-blue.svg)](https://defcon.org/html/defcon-27/dc-27-speakers.html#Kain)
 [![OPEN-SOURCE](https://img.shields.io/badge/OPEN-SOURCE-orange.svg)](#)
 [![GPL Licence](https://img.shields.io/badge/LICENSE-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0/)
 
@@ -11,22 +11,22 @@ Before going any further, I want to make sure to acknowledge the people (and rep
 1. TeslaUSB (https://github.com/marcone/teslausb).
 2. ALPR-Unconstrained (https://github.com/sergiomsilva/alpr-unconstrained).
 3. Facenet (found at https://github.com/davidsandberg/facenet) and facenet_trt (https://github.com/JerryJiaGit/facenet_trt).
-4. TeslaJS (https://github.com/mseminatore/TeslaJS) built off of the original work of Tim Dorr (https://tesla-api.timdorr.com/)
+4. TeslaJS (https://github.com/mseminatore/TeslaJS) build off the original work of Tim Dorr (https://tesla-api.timdorr.com/)
 5. The whole team at Tevora (https://threat.tevora.com).
 
 ## Information
 
-Scout is a simple to install, and simple to use tool for analyzing video data from Tesla Model S, 3 and X camera feeds.
+Scout is a simple to install (at v1.0), and simple to use tool for analyzing video data from Tesla Model S, 3 and X camera feeds.
 
 Scout is intended to be built on an Nividia Jetson Xavier or Nano, but you may use a Raspberry Pi 4 if real time notification isn't a priority.
 
-For detailed background on this project, check out this in-depth [WIRED article](https://www.wired.com/story/tesla-surveillance-detection-scout/).
+Detailed documentation coming shortly.
 
 # First Things First (Polling Data)
 
 Even if you don't yet have the hardware necessary to start running inference with Scout, you can start polling your vehicle, so that at least you can start to capture your historical trip data. Scout utilizes [TeslaJS](https://github.com/mseminatore/TeslaJS) for polling.
 
-Once your MongoDB instance is up and running, update the `CHANGEME` sections of `scripts/TeslaJS/poll.js`.
+NOTE: Replate all CHANGEME areas in code
 
 If you'd like to restart the poll script automatically if it crashes (internet outage or similar), uncomment lines 3 and 4 of `setup.sh`, and comment line 5.
 
@@ -53,14 +53,18 @@ Finally, run `./scripts/TeslaJS/setup.sh`.
 17. Create a 500GB EXT4 Partition
 18. In `/opt/nvidia/l4t-usb-device-mode/nv-l4t-usb-device-mode-config.sh`, uncomment line 110 and comment line 109
 19. Get the UUIDs of the two partions on the SSD, and update the CHANGEME areas of `./scripts/Xavier/setup.sh` appropriately
-20. Run `./scripts/Xavier/setup.sh`
+20. Run `./scripts/Xavier/setup.sh` and `./setup.sh` from the `scripts/alpr-unconstrained` directory
 21. Reboot Xaxier
 22. Add the lines in ./scripts/Xavier/crontab to your user's crontab
 23. Congratulations, you are now a data hoarder.
+24. The lp2 directory requires a weights file which you can download [here](https://drive.google.com/open?id=1XC8eu-GIAg_k9A07U-vl_sPjHrjYirnZ). This is simply custom training YoloV3 to detect license plates using the Google OpenImages dataset.
+25. You should run the command in unixTS from within the mongo shell to add unixTS field to any existing poll docs. This will be implemented as an automated method shortly.
 
 Try powering down the Xavier and plugging it into a Tesla USB slot (unplug your existing flash drive first if you're using one), using the provided Xavier USB-C to USB-A cable, and powering the Xavier via USB-C car charger (into the USB-C port on the side of the Xavier with the other various ports). Tesla will either automatically mount the device, or if you see the camera icon with a gray dot, you can press-hold on the camera button to mount the device. That gray dot should turn red.
 
 ---
+
+_Next Up: Familiar Face Detection, then GUI. *Watch* this repo to be notified as code is released. Releasing code as soon as I am able._
 
 # BOM
 

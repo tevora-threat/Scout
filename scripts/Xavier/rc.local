@@ -1,0 +1,9 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+
+python3 /home/CHANGEME/scripts/watcher.py &
+python /home/CHANGEME/alpr-unconstrained/vehicle-detection.py &
+python /home/CHANGEME/alpr-unconstrained/license-plate-detection.py &
+python3 /home/CHANGEME/alpr-unconstrained/license-plate-ocr.py &

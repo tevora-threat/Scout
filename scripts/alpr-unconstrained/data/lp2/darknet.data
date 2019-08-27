@@ -1,0 +1,5 @@
+classes = 1
+train  = /home/CHANGEME/alpr-unconstrained/data/lp2/plate_train.txt
+valid  = /home/CHANGEME/alpr-unconstrained/data/lp2/plate_test.txt
+names  = /home/CHANGEME/alpr-unconstrained/data/lp2/classes.names
+backup  = /home/CHANGEME/alpr-unconstrained/data/lp2
