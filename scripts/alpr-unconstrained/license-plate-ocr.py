@@ -94,7 +94,7 @@ class Handler(FileSystemEventHandler):
                                                                                   '%Y-%m-%d %H-%M-%S').timestamp()
                                     print(video_start_time)
                                     frame_time_seconds = (round(int(file_name.split('-')[-1].split('_')[0]) / 4) - 1)
-                                    if frame_time_seconds > 0:
+                                    if frame_time_seconds < 0:
                                             frame_time_seconds = 0
                                     print(frame_time_seconds)
                                     tz = pytz.timezone('America/Los_Angeles')
