@@ -18,7 +18,7 @@ Before going any further, I want to make sure to acknowledge the people (and rep
 
 Scout is a simple to install (at v1.0), and simple to use tool for analyzing video data from Tesla Model S, 3 and X camera feeds.
 
-Scout is intended to be built on an Nividia Jetson Xavier or Nano, but you may use a Raspberry Pi 4 if real time notification isn't a priority.
+Scout is intended to be built on an Nvidia Jetson Xavier or Nano, but you may use a Raspberry Pi 4 if real time notification isn't a priority.
 
 Detailed documentation coming shortly.
 
