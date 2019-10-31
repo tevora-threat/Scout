@@ -26,7 +26,7 @@ Detailed documentation coming shortly.
 
 Even if you don't yet have the hardware necessary to start running inference with Scout, you can start polling your vehicle, so that at least you can start to capture your historical trip data. Scout utilizes [TeslaJS](https://github.com/mseminatore/TeslaJS) for polling.
 
-NOTE: Replate all CHANGEME areas in code
+NOTE: Replace all CHANGEME areas in code
 
 If you'd like to restart the poll script automatically if it crashes (internet outage or similar), uncomment lines 3 and 4 of `setup.sh`, and comment line 5.
 
