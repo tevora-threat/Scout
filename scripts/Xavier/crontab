@@ -1,2 +1,2 @@
-* * * * * /home/CHANGEME(USERNAME)/checkCopy.sh >/dev/null 2>&1
-* * * * * sleep 30;/home/CHANGEME(USERNAME)/checkCopy.sh >/dev/null 2>&1
+* * * * * /root/checkCopy.sh >/dev/null 2>&1 #CHANGEME
+* * * * * sleep 30;/root/checkCopy.sh >/dev/null 2>&1 #CHANGEME

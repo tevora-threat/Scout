@@ -5,7 +5,7 @@ import os
 from subprocess import Popen
 
 class Watcher:
-    DIRECTORY_TO_WATCH = "/tesladrive/backups/RecentClips"
+    DIRECTORY_TO_WATCH = "/tesladrive/Videos"
 
     def __init__(self):
         self.observer = Observer()
@@ -32,9 +32,14 @@ class Handler(FileSystemEventHandler):
             return None
 
         elif event.event_type == 'created':
+            # Take any action here when a file is first created.
             print("Received created event - %s." % event.src_path)
             #preprocess the video
-            Popen(['/home/CHANGEME/scripts/preprocess.sh', event.src_path])
+            Popen(['/home/CHANGEME(USERNAME)/scripts/preprocess.sh', event.src_path]) #CHANGEME
+
+        elif event.event_type == 'modified':
+            # Taken any action here when a file is modified.
+            print("Received modified event - %s." % event.src_path)
 
 
 if __name__ == '__main__':
