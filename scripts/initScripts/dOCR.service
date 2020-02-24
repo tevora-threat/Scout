@@ -1,0 +1,6 @@
+[Unit]
+Description=OCR service
+After=overclock.service
+[Service]
+Type=simple
+ExecStart=/root/initScripts/dOCR.sh #CHANGEME

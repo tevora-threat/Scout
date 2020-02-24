@@ -4,7 +4,7 @@ import numpy as np
 import traceback
 
 import darknet.python.darknet as dn
-
+import os
 from src.label import Label, lwrite
 from os.path import splitext, basename, isdir
 from os import makedirs
@@ -17,13 +17,13 @@ from watchdog.events import FileSystemEventHandler
 
 lp_threshold = .5
 
-vehicle_weights = 'data/lp2/darknet-yolov3_final.weights'.encode("utf-8")
-vehicle_netcfg = 'data/lp2/darknet-yolov3.cfg'.encode("utf-8")
-vehicle_dataset = 'data/lp2/darknet.data'.encode("utf-8")
+vehicle_weights = '/home/CHANGEME(USERNAME)/projects/alpr-unconstrained/data/lp2/darknet-yolov3_final.weights'.encode("utf-8")
+vehicle_netcfg = '/home/CHANGEME(USERNAME)/projects/alpr-unconstrained/data/lp2/darknet-yolov3.cfg'.encode("utf-8")
+vehicle_dataset = '/home/CHANGEME(USERNAME)/projects/alpr-unconstrained/data/lp2/darknet.data'.encode("utf-8")
 
 vehicle_net = dn.load_net(vehicle_netcfg, vehicle_weights, 0)
 vehicle_meta = dn.load_meta(vehicle_dataset)
-output_dir='/tesladrive/detections/plates'
+output_dir = '/tesladrive/detections/plates'
 
 
 class Watcher:
@@ -57,7 +57,7 @@ class Handler(FileSystemEventHandler):
             # Take any action here when a file is first created.
             print("Received created event - %s." % event.src_path)
             try:
-                img_path=event.src_path
+                img_path = event.src_path
                 print('\tScanning %s' % img_path)
 
                 bname = basename(splitext(img_path)[0])
@@ -81,15 +81,19 @@ class Handler(FileSystemEventHandler):
                         label = Label(0, tl, br)
                         Icar = crop_region(Iorig, label)
 
-
                         Lcars.append(label)
-                        height,width,_ = Icar.shape
-                        print(height,width)
-                        if height>24:
+                        height, width, _ = Icar.shape
+                        print(height, width)
+                        if height > 24:
                             cv2.imwrite('%s/%s_%dplate.png' % (output_dir, bname, i), Icar)
                         else:
                             print('plate likely too small to OCR, high change of FP')
-                    
+                            if os.path.exists(img_path):
+                                os.remove(img_path)
+                else:
+                    if os.path.exists(img_path):
+                        os.remove(img_path)
+
             except:
                 traceback.print_exc()
                 sys.exit(1)
@@ -103,5 +107,6 @@ class Handler(FileSystemEventHandler):
 if __name__ == '__main__':
     w = Watcher()
     w.run()
+
 
 

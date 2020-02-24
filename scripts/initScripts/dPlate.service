@@ -1,0 +1,6 @@
+[Unit]
+Description=Plate Detection service
+After=overclock.service
+[Service]
+Type=simple
+ExecStart=/root/initScripts/dPlate.sh #CHANGEME

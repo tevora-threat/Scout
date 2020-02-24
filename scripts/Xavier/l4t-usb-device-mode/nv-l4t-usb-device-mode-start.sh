@@ -89,7 +89,6 @@ fi
 mkdir -p /sys/kernel/config/usb_gadget/l4t
 cd /sys/kernel/config/usb_gadget/l4t
 
-
 echo 0x0103 > bcdDevice
 echo 0x0200 > bcdUSB
 echo 0x00 > bDeviceClass

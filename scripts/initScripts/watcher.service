@@ -1,0 +1,6 @@
+[Unit]
+Description=Watcher service
+After=watcher.service
+[Service]
+Type=simple
+ExecStart=/root/initScripts/watcher.sh #CHANGEME

@@ -1,0 +1,9 @@
+[Unit]
+Description=Wifi service
+After=systemd-user-sessions.service
+[Service]
+User=root
+Type=simple
+ExecStart=/root/initScripts/wifi.sh 10.0.0.1 #CHANGEME
+[Install]
+WantedBy=multi-user.target

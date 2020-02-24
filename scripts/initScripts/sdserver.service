@@ -1,0 +1,10 @@
+[Unit]
+Description=SD Web Server service
+After=network-online.target
+Wants=network-online.target
+[Service]
+User=root
+Type=simple
+ExecStart=/root/initScripts/sdserver.sh #CHANGEME
+[Install]
+WantedBy=multi-user.target

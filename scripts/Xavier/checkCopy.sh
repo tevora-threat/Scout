@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #refresh file list
-umount /media/CHANGEME(USERNAME)/SCOUT #CHANGEME
+umount /media/CHANGEME(USERNAME)/SCOUT 
 sleep 1
-mount -o loop,rw,sync,dirsync,offset=210763776 /teslaflash/sdsusb.img /media/CHANGEME(USERNAME)/SCOUT #CHANGEME
+mount -o loop,rw,sync,dirsync,offset=210763776 /teslaflash/sdsusb.img /media/CHANGEME(USERNAME)/SCOUT 
 sleep 2
 
-cd /media/CHANGEME(USERNAME)/SCOUT/TeslaCam/RecentClips #CHANGEME
+cd /media/CHANGEME(USERNAME)/SCOUT/TeslaCam/RecentClips 
 for i in $(ls)
 do
     if grep -Fxq $i /tesladrive/recentfiles.txt
@@ -21,7 +21,7 @@ do
     fi
 done
 
-cd /tesladrive/CHANGEME(USERNAME)/SCOUT/TeslaCam/SavedClips #CHANGEME
+cd /tesladrive/CHANGEME(USERNAME)/SCOUT/TeslaCam/SavedClips 
 for i in $(ls)
 do
     if grep -Fxq $i /tesladrive/savedfolders.txt
@@ -41,7 +41,7 @@ do
     fi
 done
 
-cd /tesladrive/CHANGEME(USERNAME)/SCOUT/TeslaCam/SentryClips #CHANGEME
+cd /tesladrive/CHANGEME(USERNAME)/SCOUT/TeslaCam/SentryClips 
 for i in $(ls)
 do
     if grep -Fxq $i /tesladrive/sentryfolders.txt
@@ -60,3 +60,4 @@ do
         echo $i >> /tesladrive/sentryfolders.txt
     fi
 done
+

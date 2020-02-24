@@ -1,0 +1,10 @@
+[Unit]
+Description=SD Web Client service
+After=network-online.target
+Wants=network-online.target
+[Service]
+User=root
+Type=simple
+ExecStart=/root/initScripts/sdclient.sh #CHANGEME
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,35 @@
+/* @font-face {
+  font-family: 'GothamBook';
+  src: url('fonts/GothamBook.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamBook';
+  src: url('fonts/GothamBook.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamBook';
+  src: url('fonts/GothamBook.ttf');
+  font-weight: 700;
+  font-style: normal;
+} */
+
+
+@font-face {
+  font-family: GothamBook;
+  src: local("Gotham"),
+    url('./GothamBook.ttf') format('truetype');
+
+}
+
+/* @font-face {
+  font-family: 'GothamBook';
+  src: url('./GothamBook.ttf');
+  font-weight: 600;
+  font-style: normal;
+} */

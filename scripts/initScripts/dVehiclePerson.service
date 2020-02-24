@@ -1,0 +1,6 @@
+[Unit]
+Description=Vehicle Person service
+After=overclock.service
+[Service]
+Type=simple
+ExecStart=/root/initScripts/dVehiclePerson.sh #CHANGEME

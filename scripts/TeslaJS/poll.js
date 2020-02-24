@@ -7,14 +7,14 @@ var request = require('request');
 require('colors');
 var program = require('commander');
 var framework = require('./sampleFramework.js');
+
 const mongoose = require("mongoose");
 mongoose.connect(
     "mongodb://CHANGEME(USERNAME):CHANGEME(PASSWORD)@localhost:27017/CHANGEME(DBNAME)?authSource=admin", {
         useNewUrlParser: true
     }
 );
-
-
+//ps, always use .env
 
 const Poll = mongoose.model(
     "Poll", {
@@ -126,7 +126,6 @@ var sample = new framework.SampleFramework(program, sampleMain);
 cron.schedule("*/1 * * * * *", function () {
     sample.run();
 });
-
 
 
 var lastState = ""
