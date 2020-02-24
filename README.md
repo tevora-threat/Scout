@@ -7,7 +7,7 @@
 Surveillance Detection Scout is a hardware and software stack that makes use of your Tesla's cameras to tell you if you're being followed in real-time. The name, as you likely gathered, pays homage to the ever-effective "Surveillance Detection Route". When parked, Scout makes an excellent static surveillance practitioner as well, allowing you to run queries and establish patterns-of-life on detected persons.
 
 --
-Nov Update: The next several commits will be breaking.
+Feb Update: README to be updated shortly to reflect initial FCR.
 --
 
 Before going any further, I want to make sure to acknowledge the people (and repositories) who helped this project, with or without knowing they did so.
