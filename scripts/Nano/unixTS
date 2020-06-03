@@ -1,0 +1,6 @@
+db.polls.find().forEach( function(poll) {
+    if (!poll.unixTS){
+        poll.unixTS = (new Date(doc.ts * 1000)/1000);
+        db.polls.save(poll);
+    }
+} );

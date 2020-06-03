@@ -1,0 +1,2 @@
+* * * * * /home/l0r3zz/Scout/scripts/Nano/checkCopy.sh >/dev/null 2>&1
+* * * * * sleep 30;/home/l0r3zz/Scout/scripts/Nano/checkCopy.sh >/dev/null 2>&1

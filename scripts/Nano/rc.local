@@ -1,0 +1,9 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+
+python3 /home/l0r3zz/Scout/scripts/Nano/rc.local/scripts/watcher.py &
+python /home/l0r3zz/Scout/alpr-unconstrained/vehicle-detection.py &
+python /home/l0r3zz/Scout/alpr-unconstrained/license-plate-detection.py &
+python3 /home/l0r3zz/Scout//alpr-unconstrained/license-plate-ocr.py &

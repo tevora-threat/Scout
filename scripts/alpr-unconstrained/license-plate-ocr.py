@@ -40,9 +40,9 @@ else:
 
 ocr_threshold = .4
 
-ocr_weights = '/home/CHANGEME(USERNAME)/projects/alpr-unconstrained/data/ocr/ocr-net.weights'.encode("utf-8")
-ocr_netcfg = '/home/CHANGEME(USERNAME)/projects/alpr-unconstrained/data/ocr/ocr-net.cfg'.encode("utf-8")
-ocr_dataset = '/home/CHANGEME(USERNAME)/projects/alpr-unconstrained/data/ocr/ocr-net.data'.encode("utf-8")
+ocr_weights = '/home/l0r3zz/Scout/scripts/alpr-unconstrained/data/ocr/ocr-net.weights'.encode("utf-8")
+ocr_netcfg = '/home/l0r3zz/Scout/scripts/alpr-unconstrained/data/ocr/ocr-net.cfg'.encode("utf-8")
+ocr_dataset = '/home/l0r3zz/Scout/scripts/alpr-unconstrained/data/ocr/ocr-net.data'.encode("utf-8")
 
 ocr_net = dn.load_net(ocr_netcfg, ocr_weights, 0)
 ocr_meta = dn.load_meta(ocr_dataset)
