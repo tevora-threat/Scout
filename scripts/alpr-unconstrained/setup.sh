@@ -1,3 +1,3 @@
-cp -R darknet /home/(CHANGEME)/alpr-unconstrained/.
-cp -R data /home/(CHANGEME)/alpr-unconstrained/.
-cp *.py /home/(CHANGEME)/alpr-unconstrained/.
+cp -R darknet /home/l0r3zz/Scout/scripts/alpr-unconstrained/.
+cp -R data /home/l0r3zz/Scout/scripts/alpr-unconstrained/.
+cp *.py /home/l0r3zz/Scout/scripts/alpr-unconstrained/.
