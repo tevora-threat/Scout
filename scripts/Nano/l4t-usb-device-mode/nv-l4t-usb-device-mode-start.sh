@@ -148,6 +148,7 @@ if [ ${enable_ums} -eq 1 ]; then
     mkdir -p "${func}"
     ln -sf "${func}" "${cfg}"
     # Prevent users from corrupting the disk image; make it read-only
+    echo " ${func}   ${cfg} "
     # echo 0 > "${func}/lun.0/ro"
     echo 1 > "${func}/lun.0/removable"
     # echo 0 > "${func}/lun.0/stall"

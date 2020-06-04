@@ -16,8 +16,8 @@ cp preprocessing/* ~/scripts/.
 chmod +x ~/scripts/preprocess.sh
 sudo cp rc.local /etc/. && chmod +x /etc/rc.local 
 
-echo "UUID=CHANGEME(UUID_OF_500GB_PARTITION) /tesladrive ext4 defaults 0 2" >> /etc/fstab
-echo "UUID=CHANGEME(UUID_OF_284GB_PARTITION) /teslaflash ext4 defaults 0 2" >> /etc/fstab
+echo "UUID=a562f68b-8044-4854-b689-0bb854cf100b /tesladrive ext4 defaults 0 2" >> /etc/fstab
+echo "UUID=5f4c0e3b-92b5-4183-abaf-c4b56470213c /teslaflash ext4 defaults 0 2" >> /etc/fstab
 
 cp checkCopy.sh ~/. && chmod +x ~/checkCopy.sh
 
