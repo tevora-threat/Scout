@@ -13,7 +13,7 @@
     "ip": "^1.1.5",
     "leaflet": "^1.5.1",
     "leaflet.marker.slideto": "^0.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "vue": "^2.6.10",
     "vue-moment": "^4.0.0",
     "vue-router": "^3.0.3",
