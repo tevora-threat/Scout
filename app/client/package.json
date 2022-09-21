@@ -22,7 +22,7 @@
     "vue2-leaflet-markercluster": "^3.0.0",
     "vue2-leaflet-movingmarker": "0.0.1",
     "vue2-leaflet-rotatedmarker": "^1.0.9",
-    "vuetify": "^2.0.0"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
